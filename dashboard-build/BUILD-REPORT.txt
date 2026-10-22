@@ -1,0 +1,13 @@
+VISION COMMAND CENTER
+Production Build Report
+==============================
+Commit: c90ce4b9ef84edb92a75b684c7a0778609d41af8
+Date: Thu Oct 22 16:11:48 UTC 2026
+Node: v22.23.3
+Bundle size: 265063 bytes
+Source map size: 649347 bytes
+TypeScript validation: PASSED
+JavaScript syntax: PASSED
+Static checks: PASSED
+ServiceNow runtime test: PENDING
+Deployment: NOT PERFORMED
