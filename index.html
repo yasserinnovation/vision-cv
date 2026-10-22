@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061523">
+  <title>Vision Intelligence | Industrial Computer Vision</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="stage" id="stage" aria-label="Industrial computer vision simulation">
+    <video id="footage" class="footage" autoplay muted loop playsinline poster="assets/industrial-scene.svg">
+      <source src="assets/industrial-footage.mp4" type="video/mp4">
+    </video>
+    <div id="illustration" class="illustration" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="gridlines" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+    <div class="reticle" aria-hidden="true"><span></span><span></span></div>
+    <div id="boxes" class="boxes" aria-label="Detected objects"></div>
+
+    <div class="topbar">
+      <div class="identity"><span class="brand-icon">◎</span><span><b>VISION INTELLIGENCE</b><small>AI DETECTION ENGINE <span class="sep">/</span> CAM-07</small></span></div>
+      <div class="top-right"><span class="pill simulated" id="mode">● SIMULATION</span><span class="record"><i></i> REC</span><span class="clock" id="clock">--:--:--</span></div>
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-title">LIVE ANALYTICS <span class="live-dot"></span></div>
+      <div class="metric"><span>OBJECTS TRACKED</span><strong id="count">04</strong></div>
+      <div class="metric"><span>SAFETY ALERTS</span><strong id="alerts" class="warning">02</strong></div>
+      <div class="metric"><span>AVG CONFIDENCE</span><strong id="avg">95%</strong></div>
+      <div class="mini-divider"></div>
+      <div class="sidebar-title">DETECTION TYPES</div>
+      <div class="legend"><span><i class="dot green"></i> Person / PPE compliant</span><b>2</b></div>
+      <div class="legend"><span><i class="dot red"></i> PPE violation</span><b>1</b></div>
+      <div class="legend"><span><i class="dot amber"></i> Industrial vehicle</span><b>1</b></div>
+    </div>
+
+    <section id="detail" class="detail" hidden aria-live="polite">
+      <button type="button" id="closeDetail" class="close" aria-label="Close details">×</button>
+      <div class="detail-label">TRACK INTELLIGENCE</div>
+      <h2 id="detailTitle">Detection</h2>
+      <div class="detail-grid"><span>Tracking ID</span><b id="detailId"></b><span>Category</span><b id="detailCategory"></b><span>Confidence</span><b id="detailConfidence"></b><span>Priority</span><b id="detailSeverity"></b></div>
+      <p class="detail-footer">Clicking a detection sends it to the command center for review.</p>
+    </section>
+
+    <div class="bottombar"><div class="location"><span class="live-dot"></span> PROCESSING UNIT <span class="dim">/</span> CAMERA 07 <span class="dim">/</span> NORTH PLATFORM</div><div class="note">DEMO SIMULATION <span class="sep">•</span> NOT LIVE AI INFERENCE</div></div>
+    <div class="help">SELECT ANY DETECTION BOX TO INSPECT <span>↗</span></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
